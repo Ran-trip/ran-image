@@ -57,7 +57,7 @@ img {
     /* transition */
     transform-origin: left;
     transition: transform 0.5s;
-  }
+}
 
 #right-door {
     top: 0;
@@ -66,14 +66,15 @@ img {
     /* transition */
     transform-origin: right;
     transition: transform 0.5s;
+}
+.doorContainer {
+    display:flex;
   }
 
-  media (max-width: 700px) {
+
+@media screen and (max-width: 700px) {
       .comlumn {
           margin: 0 5px;
       }
   }
 
-.doorContainer {
-    display:flex;
-}

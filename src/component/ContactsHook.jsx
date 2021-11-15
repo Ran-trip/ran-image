@@ -3,8 +3,7 @@ import { useForm } from "react-hook-form"
 
 function ContactsHook() {
     const {
-        email,
-        message,
+        register,      
         handleSubmit,
         formState: { errors }
     } = useForm();
@@ -13,11 +12,10 @@ function ContactsHook() {
     }
     return (
         <form onSubmit={handleSubmit(onSubmit)}>
-            <input defaultValue="email" {...email("example")}/>
-            <input {...message("exampleRequired", { required: true}) } />
-            {errors.exampleRequired && <p>This field is required</p>}
-
-            <input type="Envoyer"/>
+            <input id="email" defaultValue="email" {...register("email")}/>
+            <input id="message" {...register("message", { required: true}) } />
+            {errors.message && <p>This field is required</p>}
+            <input id="submit" type="submit"/>
             
         </form >
     )

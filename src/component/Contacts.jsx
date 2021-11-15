@@ -1,6 +1,7 @@
 import React from 'react';
 import "./Contacts.css"; 
 import { useForm } from "react-hook-form";
+import ContactsHook from './ContactsHook';
 
 function Contacts() {
     return (
@@ -34,7 +35,7 @@ function Contacts() {
                     <div id="right-door" class="door"></div> 
                 </div>
            </div>
-
+            <ContactsHook/>
             
         </main>
     )
